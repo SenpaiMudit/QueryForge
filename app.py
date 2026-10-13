@@ -870,8 +870,8 @@ with main_tabs[2]:
                     "Column Name": c.name,
                     "Data Type": c.type,
                     "Primary Key": "🔑 Yes" if c.is_primary_key else "No",
-                    "Not Null": "Yes" if c.is_not_null else "No",
-                    "Default Value": str(c.default_value) if c.default_value is not None else "-",
+                    "Not Null": "Yes" if not c.nullable else "No",
+                    "Default Value": str(c.default) if c.default is not None else "-",
                 })
             st.dataframe(pd.DataFrame(cols_data), use_container_width=True, hide_index=True)
 
@@ -881,9 +881,9 @@ with main_tabs[2]:
                 fk_data = []
                 for fk in selected_table.foreign_keys:
                     fk_data.append({
-                        "From Column": fk.from_col,
+                        "From Column": fk.from_column,
                         "References Table": fk.to_table,
-                        "To Column": fk.to_col,
+                        "To Column": fk.to_column,
                     })
                 st.dataframe(pd.DataFrame(fk_data), use_container_width=True, hide_index=True)
 
