@@ -268,20 +268,28 @@ QueryForge/
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### ⚡ Quick Start: Pure Python Streamlit App (Recommended — Zero JS!)
 
-- Python 3.11+
-- Node.js 20+
-- Free [Google AI Studio](https://aistudio.google.com/) API key
-
-### 1. Clone the Repository
+Run the complete QueryForge interactive workspace in a single command with 100% Python:
 
 ```bash
-git clone https://github.com/yourusername/QueryForge.git
+# 1. Clone the repository
+git clone https://github.com/SenpaiMudit/QueryForge.git
 cd QueryForge
-```
 
-### 2. Backend Setup
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Launch QueryForge Studio
+streamlit run app.py
+```
+Open **`http://localhost:8501`** in your browser. Pre-loaded sample databases (University and E-Commerce) are included out-of-the-box!
+
+---
+
+### Alternative: FastAPI Backend
+
+If running the headless REST API service:
 
 ```bash
 cd backend

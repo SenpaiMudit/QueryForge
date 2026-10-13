@@ -24,6 +24,10 @@ build/
 backend/databases/
 backend/snapshots/
 backend/uploads/
+databases/
+snapshots/
+uploads/
+*.db
 
 # ──────────────────────────────────────────────
 # Node / Frontend
