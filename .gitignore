@@ -1,0 +1,50 @@
+# QueryForge - Git Ignore
+
+# ──────────────────────────────────────────────
+# Python
+# ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ──────────────────────────────────────────────
+# QueryForge Data (user files - never commit)
+# ──────────────────────────────────────────────
+backend/databases/
+backend/snapshots/
+backend/uploads/
+
+# ──────────────────────────────────────────────
+# Node / Frontend
+# ──────────────────────────────────────────────
+node_modules/
+frontend/.svelte-kit/
+frontend/dist/
+frontend/build/
+.env.local
+
+# ──────────────────────────────────────────────
+# OS
+# ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ──────────────────────────────────────────────
+# IDE
+# ──────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
